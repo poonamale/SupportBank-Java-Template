@@ -38,6 +38,6 @@ public class Transaction {
     }
 
     public String toString(){
-        return String.format("On %s, %s gave %s money for %s. The money owed is %.2f",date, from, to, narrative, amount);
+        return String.format("On %s, %s gave %s £%.2f for %s.",date, from, to, amount, narrative);
     }
 }
