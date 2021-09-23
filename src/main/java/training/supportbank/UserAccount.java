@@ -1,6 +1,9 @@
 package training.supportbank;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class UserAccount {
     private String userName;
@@ -8,6 +11,7 @@ public class UserAccount {
 
     public UserAccount (String name){
         userName = name;
+        balance = new BigDecimal(0);
     }
 
     public void decreaseBalance(BigDecimal amount) {
@@ -24,5 +28,13 @@ public class UserAccount {
 
     public BigDecimal getBalance() {
         return balance;
+    }
+
+    @Override
+    public String toString() {
+        return "UserAccount{" +
+                "userName='" + userName + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }
